@@ -21,19 +21,19 @@ def get_choice_system(num1, num2):
     return randint(num1, num2)
 
 
-def find_winner(sys, user):
+def find_winner(system, user):
     """
     find winner
-    :param sys: system choice
+    :param system: system choice
     :param user: user guess
     :return: message like: You win
     """
     message = str()
 
-    if sys == user:
-        message = f'You win\nYour Guess is: {user} and system choice is: {sys}'
+    if system == user:
+        message = f'You win\nYour Guess is: {user} and system choice is: {system}'
     else:
         print('Your guess is not correct! try again...')
-        return find_winner(sys, get_guess_user())
+        return find_winner(system, get_guess_user())
 
     return message
